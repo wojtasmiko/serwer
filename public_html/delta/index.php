@@ -18,11 +18,14 @@ isset($_GET['c']))
          include('views/delta-greater.php');
    }
    elseif($delta == 0){
-      $x = (-$b )/ 2 * $a;
+      $x = (-$b )/ (2 * $a);
+      include('views/delta-equal.php');
    }
-   else
+   else{
       $komunikat = 'Równanie nie posiada miejsc zerowych';
-    }else{
+      include('views/delta-less.php');
+    }
+   }else{
        include('views/error.php');
     }
 
